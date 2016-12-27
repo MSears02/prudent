@@ -5,21 +5,25 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding:  UTF-8
+  database: Prudent_development
   pool: 5
-  timeout: 5000
+  username: postgres
+  password: 87Michael
+  host: localhost
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: Prudent_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: db/test_Prudent
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/Prudent
