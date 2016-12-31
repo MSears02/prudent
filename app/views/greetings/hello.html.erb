@@ -41,11 +41,19 @@
 
 		</div>
 	</div>
-	<div>
-		<% @bCats.each do |b| %>
-			<%= b.Name %> <br />
+	<div class='row'>
+		<div class='col-md-3'>
+			<table class='table table-striped'>
+				<% @bCats.each do |b| %>
+				<tr>
+					<td><%= b.id %> </td>
 
-		<% end %>
+					<td><%= b.Name %></td>
+
+				<% end %>
+				</tr>
+			</table>
+		</div>
 	</div>
 
 
