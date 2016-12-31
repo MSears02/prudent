@@ -1,5 +1,5 @@
 class GreetingsController < ApplicationController
-	layout = false;
+	layout = true
 
   def hello
   	@message = "Testing Getting Ruby App on Heroku"

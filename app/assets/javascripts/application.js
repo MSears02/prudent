@@ -11,10 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require tether
-//= require bootstrap-sprockets
-//= require angular
-//= require angular-animate
-//= require angular-resource
+//= require bootstrap
+//= require turbolinks
+//= require_tree .
