@@ -19,6 +19,9 @@ gem 'sass-rails', '~> 5.0'
 #Use twitter bootsrap for layout
 gem 'bootstrap', '~> 4.0.0.alpha5'
 
+#Bootstrap helpers
+gem 'bh'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
