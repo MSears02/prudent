@@ -5,7 +5,7 @@ class GreetingsController < ApplicationController
   	@message = "Testing Getting Ruby App on Heroku"
 
   	#@bCats = BudgetCategory.sortedAsc
-		@bCats = BudgetCategory.sortedDesc
+		@bCats = BudgetCategory.sortedAsc
 
   end
 end
