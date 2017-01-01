@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161231082345) do
+ActiveRecord::Schema.define(version: 20161231224225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(version: 20161231082345) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "sort"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "PageTitle"
+    t.string   "PermaLink"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "Email"
+    t.string   "Password"
+    t.string   "UserName"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

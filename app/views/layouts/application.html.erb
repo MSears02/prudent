@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Prudent Financial Managment</title>
+    <title>Prudent Financial Management</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,10 +12,13 @@
   <body>
 	  <div class="container-fluid">
       <nav class="navbar navbar-default">
-        <ul class="nav nav-pills">
-          <li><a href"">HOME</a></li>
-          <li><a href"">BUDGET</a></li>
-          <li><a href"">ACCOUNTS</a></li>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Sample", root_path   + 'greetings/hello'%></li>
+          <li><%= link_to "Accounts", root_path %></li>
+          <li><%= link_to "Budgets", root_path %></li>
+          <li><%= link_to "Projections", root_path %></li>
+
         </ul>
       </nav>
     </div>

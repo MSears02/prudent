@@ -2,7 +2,7 @@ class GreetingsController < ApplicationController
 	layout = true
 
   def hello
-  	@message = "Testing Getting Ruby App on Heroku"
+  	@message = "Creating something bigger than myself"
 
   	#@bCats = BudgetCategory.sortedAsc
 		@bCats = BudgetCategory.sortedAsc
