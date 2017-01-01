@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :budget_items
+  resources :budgets
   get 'home/index'
 
   resources :users
