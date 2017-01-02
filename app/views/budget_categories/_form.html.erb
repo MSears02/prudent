@@ -1,0 +1,30 @@
+<%= form_for(budget_category) do |f| %>
+  <% if budget_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(budget_category.errors.count, "error") %> prohibited this budget_category from being saved:</h2>
+
+      <ul>
+      <% budget_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><%= f.text_field(:Name)%></td>
+    </tr>
+    <tr>
+      <th>Is this a debit?</th>
+      <td><%= f.check_box(:IsDebit, :default => true)%></td>
+    </tr>
+    <tr>
+      <th>Sort</th>
+      <td><%= f.text_field(:sort)%></td>
+    </tr>
+  </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

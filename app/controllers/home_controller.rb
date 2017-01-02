@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   def index
     @Welcome = 'The Future of Your Finances!'
 
-    @BCats = BudgetCategory.sortedAsc
+    @BCats = BudgetCategory.all 
   end
 end

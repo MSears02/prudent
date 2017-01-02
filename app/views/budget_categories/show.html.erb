@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<table class='table'>
+  <thead><th>Sort</th><th>Category Name</th><th>Is Debit?</th><th>Options</th>
+  <tr>
+    <td><%= @budget_category.sort %></td>
+    <td><%= @budget_category.Name %></td>
+    <td><%= @budget_category.IsDebit %></td>
+    <td><%= link_to 'Edit', edit_budget_category_path(@budget_category) %> </td>
+  </tr>
+</table>
+
+<%= link_to 'Back', budget_categories_path %>

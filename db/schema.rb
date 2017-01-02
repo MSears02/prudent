@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101031312) do
+ActiveRecord::Schema.define(version: 20170102021322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20170101031312) do
     t.integer  "DueDate",                      null: false
     t.date     "StartDate",                    null: false
     t.date     "EndDate"
-    t.boolean  "IsDebit",      default: true,  null: false
     t.boolean  "IsReocurring", default: false, null: false
     t.boolean  "IsCollection", default: false, null: false
     t.datetime "created_at",                   null: false
@@ -41,13 +40,6 @@ ActiveRecord::Schema.define(version: 20170101031312) do
     t.float    "CurrentBalance"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-  end
-
-  create_table "pages", force: :cascade do |t|
-    t.string   "PageTitle"
-    t.string   "PermaLink"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

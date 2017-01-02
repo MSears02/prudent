@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :budget_categories
   resources :budget_items
   resources :budgets
   get 'home/index'

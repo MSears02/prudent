@@ -14,10 +14,11 @@
       <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
           <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Sample", :controller => 'greetings', :action => 'hello'%></li>
-          <li><%= link_to "Accounts", root_path %></li>
           <li><%= link_to "Budgets", budgets_path %></li>
           <li><%= link_to "Budget Items", budget_items_path %></li>
+          <li><%= link_to "Budget Categories", budget_categories_path %></li>
+          <li><%= link_to "Sample", :controller => 'greetings', :action => 'hello'%></li>
+          <li><%= link_to "Accounts", root_path %></li>          
           <li><%= link_to "Projections", root_path %></li>
 
         </ul>

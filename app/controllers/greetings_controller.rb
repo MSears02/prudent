@@ -5,7 +5,7 @@ class GreetingsController < ApplicationController
   	@message = "Creating something bigger than myself"
 
   	#@bCats = BudgetCategory.sortedAsc
-		@bCats = BudgetCategory.sortedAsc
+		@bCats = BudgetCategory.all()
 
   end
 end
