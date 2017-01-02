@@ -17,23 +17,35 @@ ActiveRecord::Schema.define(version: 20170101031312) do
 
   create_table "budget_categories", force: :cascade do |t|
     t.string   "Name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "IsDebit",    default: true, null: false
     t.integer  "sort"
-  end
-
-  create_table "budget_items", force: :cascade do |t|
-    t.float    "amount"
-    t.integer  "DueDates",                  null: false, array: true
-    t.date     "StartDate",                 null: false
-    t.date     "EndDate"
-    t.boolean  "IsBill",     default: true, null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
 
+  create_table "budget_items", force: :cascade do |t|
+    t.float    "amount"
+    t.integer  "DueDate",                      null: false
+    t.date     "StartDate",                    null: false
+    t.date     "EndDate"
+    t.boolean  "IsDebit",      default: true,  null: false
+    t.boolean  "IsReocurring", default: false, null: false
+    t.boolean  "IsCollection", default: false, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "budgets", force: :cascade do |t|
     t.string   "Title"
+    t.float    "StartingBalance"
+    t.float    "CurrentBalance"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "PageTitle"
+    t.string   "PermaLink"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
