@@ -27,7 +27,7 @@ class BudgetsController < ApplicationController
   # POST /budgets.json
   def create
     @budget = Budget.new(budget_params)
-
+    @budget.CurrentBalance = @budget.StartingBalance
     respond_to do |format|
       if @budget.save
         format.html { redirect_to @budget, notice: 'Budget was successfully created.' }
@@ -71,6 +71,6 @@ class BudgetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def budget_params
-      params.fetch(:budget, {}).permit(:Title)
+      params.fetch(:budget, {}).permit(:Title, :StartingBalance)
     end
 end

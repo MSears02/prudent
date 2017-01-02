@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
+<table class='table'>
+  <thead><th>Name</th><th>Starting Balance</th><th>Current Balance</th><th>Created</th><th>Updated</th><th>Options</th></thead>
+  <tr>
+    <td><%= @budget.Title %></td>
+    <td><%= number_to_currency(@budget.StartingBalance) %></td>
+    <td><%= number_to_currency(@budget.CurrentBalance) %></td>
+    <td><%= @budget.created_at%> </td>
+    <td><%= @budget.updated_at%> </td>
+    <td><%= link_to 'Edit', edit_budget_path(@budget) %> </td>
 
-<%= @budget.Title %>
-<%= link_to 'Edit', edit_budget_path(@budget) %> |
+  </tr>
+</table>
 <%= link_to 'Back', budgets_path %>

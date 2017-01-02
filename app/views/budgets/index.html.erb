@@ -12,7 +12,7 @@
   <tbody>
     <% @budgets.each do |budget| %>
       <tr>
-        <td><%= budget.Title %></td>
+        <td><%= budget.Title %> -- <%= number_to_currency(budget.CurrentBalance) %></td>
 
         <td><%= link_to 'Show', budget %></td>
         <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
