@@ -1,4 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_budget_item_path(@budget_item) %> |
+<table class='table'>
+  <thead><th>Category</th><th>Amount</th><th>Due Date/th><th>Start Date</th><th>End Date</th><th>Is Reoccuring</th><th>Is Collection</th><th>Date Created</th><th>Last Updated</th></thead>
+  <tr>
+    <td><%= @budget_item.BudgetCategory %></td>
+    <td><%= number_to_currency(@budget_item.amount) %></td>
+    <td><%= @budget_item.DueDate %></td>
+    <td><%= @budget_item.StartDate %></td>
+    <td><%= @budget_item.EndDate %></td>
+    <td><%= @budget_item.IsReocurring %></td>
+    <td><%= @budget_item.IsCollection %></td>
+    <td><%= @budget_item.created_at%> </td>
+    <td><%= @budget_item.updated_at%> </td>
+    <td><%= link_to 'Edit', edit_budget_item_path(@budget_item) %> </td>
+
+  </tr>
+</table>
+
 <%= link_to 'Back', budget_items_path %>

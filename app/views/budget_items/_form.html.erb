@@ -11,8 +11,37 @@
     </div>
   <% end %>
   <table class='table table-striped'>
+    <tr>
+      <th>Category</th>
+      <td><%= f.select(:id ,@BCats) %> </td>
+    </tr>
+    <tr>
+      <th>Amount</th>
+      <td><%= f.text_field(:amount)%></td>
+    </tr>
+    <tr>
+      <th>Due Date</th>
+      <td><%= f.date_field :DueDate, class: 'datepicker' %></td>
+    </tr>
+    <tr>
+      <th>Is this item reoccuring?</th>
+      <td><%= f.check_box(:IsReocurring) %></td>
+    </tr>
+    <tr>
+      <th>Start Date</th>
+      <td><%= f.date_field :StartDate, class: 'datepicker' %></td>
+    </tr>
+    <tr>
+      <th>End Date</th>
+      <td><%= f.date_field :EndDate, class: 'datepicker' %></td>
+    </tr>
+    <tr>
+      <th>Is this item a collection?</th>
+      <td><%= f.check_box(:IsReocurring) %></td>
+    </tr>
 
   </table>
+
   <div class="actions">
     <%= f.submit %>
   </div>

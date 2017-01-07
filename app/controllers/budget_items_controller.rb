@@ -15,16 +15,19 @@ class BudgetItemsController < ApplicationController
   # GET /budget_items/new
   def new
     @budget_item = BudgetItem.new
+    @BCats = BudgetCategory.all.map{|bc| [bc.Name, bc.id]}
   end
 
   # GET /budget_items/1/edit
   def edit
+    @BCats = BudgetCategory.all.map{|bc| [bc.Name, bc.id]}
   end
 
   # POST /budget_items
   # POST /budget_items.json
   def create
     @budget_item = BudgetItem.new(budget_item_params)
+
 
     respond_to do |format|
       if @budget_item.save
@@ -69,6 +72,6 @@ class BudgetItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def budget_item_params
-      params.fetch(:budget_item, {}).permit()
+      params.fetch(:budget_item, {}).permit(:amount, :BudgetCategory, :DueDate, :StartDate, :EndDate, :IsReocurring, :IsCollection)
     end
 end

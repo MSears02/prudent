@@ -4,8 +4,9 @@
     <title>Prudent Financial Management</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 
   </head>
 
@@ -18,7 +19,7 @@
           <li><%= link_to "Budget Items", budget_items_path %></li>
           <li><%= link_to "Budget Categories", budget_categories_path %></li>
           <li><%= link_to "Sample", :controller => 'greetings', :action => 'hello'%></li>
-          <li><%= link_to "Accounts", root_path %></li>          
+          <li><%= link_to "Accounts", root_path %></li>
           <li><%= link_to "Projections", root_path %></li>
 
         </ul>

@@ -5,13 +5,16 @@
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>Category Name</th><th>Amount</th><th>Due Date</th><th>Options</th>
     </tr>
   </thead>
 
   <tbody>
     <% @budget_items.each do |budget_item| %>
       <tr>
+        <td><%= budget_item.BudgetCategory %></td>
+        <td><%= budget_item.amount %></td>
+        <td><%= budget_item.DueDate %></td>
         <td><%= link_to 'Show', budget_item %></td>
         <td><%= link_to 'Edit', edit_budget_item_path(budget_item) %></td>
         <td><%= link_to 'Destroy', budget_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

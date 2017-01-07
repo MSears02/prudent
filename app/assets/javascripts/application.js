@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
 //= require tether
 //= require bootstrap
 //= require turbolinks
 //= require angular
 //= require angular-resource
+//= require moment
 //= require_tree .

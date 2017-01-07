@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :budget_categories
   resources :budget_items
   resources :budgets
   get 'home/index'
 
-  resources :users
   get 'greetings/hello'
 
 
