@@ -1,4 +1,4 @@
 class BudgetCategory < ApplicationRecord
-has_many :BudgetItem
+has_many :BudgetItems
 
 end

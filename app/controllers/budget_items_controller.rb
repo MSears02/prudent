@@ -72,6 +72,6 @@ class BudgetItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def budget_item_params
-      params.fetch(:budget_item, {}).permit(:amount, :BudgetCategory, :DueDate, :StartDate, :EndDate, :IsReocurring, :IsCollection)
+      params.fetch(:budget_item, {}).permit(:amount, :BudgetCategory_id, :DueDate, :StartDate, :EndDate, :IsReocurring, :IsCollection)
     end
 end

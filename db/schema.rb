@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170107051215) do
+ActiveRecord::Schema.define(version: 20170108064516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,13 +25,15 @@ ActiveRecord::Schema.define(version: 20170107051215) do
 
   create_table "budget_items", force: :cascade do |t|
     t.float    "amount"
-    t.integer  "DueDate",                      null: false
-    t.date     "StartDate",                    null: false
+    t.integer  "DueDate",                           null: false
+    t.date     "StartDate",                         null: false
     t.date     "EndDate"
-    t.boolean  "IsReocurring", default: false, null: false
-    t.boolean  "IsCollection", default: false, null: false
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "BudgetCategory_id"
+    t.boolean  "IsReocurring",      default: false, null: false
+    t.boolean  "IsCollection",      default: false, null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.index ["BudgetCategory_id"], name: "index_budget_items_on_BudgetCategory_id", using: :btree
   end
 
   create_table "budgets", force: :cascade do |t|
@@ -40,6 +42,12 @@ ActiveRecord::Schema.define(version: 20170107051215) do
     t.float    "CurrentBalance"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "budgets_budget_items", id: false, force: :cascade do |t|
+    t.integer "budget_id"
+    t.integer "BudgetItem_id"
+    t.index ["budget_id", "BudgetItem_id"], name: "index_budgets_budget_items_on_budget_id_and_BudgetItem_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

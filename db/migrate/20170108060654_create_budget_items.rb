@@ -5,13 +5,12 @@ class CreateBudgetItems < ActiveRecord::Migration[5.0]
       t.integer :DueDate, :null => false
       t.date :StartDate, :null => false
       t.date :EndDate
-      
+      t.integer :BudgetCategory_id
       t.boolean :IsReocurring, :default => false, :null => false
       t.boolean :IsCollection, :default => false, :null => false
-
-
-
       t.timestamps
+
     end
+    add_index('budget_items', 'BudgetCategory_id')
   end
 end

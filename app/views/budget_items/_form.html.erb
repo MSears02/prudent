@@ -13,7 +13,7 @@
   <table class='table table-striped'>
     <tr>
       <th>Category</th>
-      <td><%= f.select(:id ,@BCats) %> </td>
+      <td><%= f.select(:BudgetCategory_id ,@BCats) %> </td>
     </tr>
     <tr>
       <th>Amount</th>
@@ -25,7 +25,7 @@
     </tr>
     <tr>
       <th>Is this item reoccuring?</th>
-      <td><%= f.check_box(:IsReocurring) %></td>
+      <td><%= f.check_box :IsReocurring, {},"true", "false" %></td>
     </tr>
     <tr>
       <th>Start Date</th>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <th>Is this item a collection?</th>
-      <td><%= f.check_box(:IsReocurring) %></td>
+      <td><%= f.check_box :IsCollection, {}, "true", "false" %></td>
     </tr>
 
   </table>

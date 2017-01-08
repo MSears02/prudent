@@ -12,7 +12,7 @@
   <tbody>
     <% @budget_items.each do |budget_item| %>
       <tr>
-        <td><%= budget_item.BudgetCategory %></td>
+        <td><%= budget_item.BudgetCategory.Name %></td>
         <td><%= budget_item.amount %></td>
         <td><%= budget_item.DueDate %></td>
         <td><%= link_to 'Show', budget_item %></td>
