@@ -9,6 +9,23 @@
     <td><%= @budget.updated_at%> </td>
     <td><%= link_to 'Edit', edit_budget_path(@budget) %> </td>
 
+
   </tr>
 </table>
+
 <%= link_to 'Back', budgets_path %>
+
+<table class='table table-stripped'>
+  <thead>
+    <th>Category</th><th>Amount</th><th>Due Date</th><th>Balance</th>
+  </thead>
+  <tr>
+    <% @budget.BudgetItems.each do |bi|%>
+      <td><%= bi.BudgetCategory.Name %></td>
+      <td><%= bi.StartDate %></td>
+      <td><%= bi.amount %></td>
+      <td></td>
+    <% end %>
+
+  </tr>
+</table>

@@ -17,7 +17,7 @@ class BudgetItemsController < ApplicationController
     @budget_item = BudgetItem.new
     @BCats = BudgetCategory.all.map{|bc| [bc.Name, bc.id]}
   end
-
+  
   # GET /budget_items/1/edit
   def edit
     @BCats = BudgetCategory.all.map{|bc| [bc.Name, bc.id]}
