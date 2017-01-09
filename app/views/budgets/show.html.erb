@@ -17,6 +17,7 @@
 
 <table class='table table-stripped'>
   <thead>
+<<<<<<< HEAD
     <th>Category</th><th>Amount</th><th>Due Date</th><th>Balance</th>
   </thead>
   <tr>
@@ -27,5 +28,18 @@
       <td></td>
     <% end %>
 
+=======
+    <th>Category</th><th>Due Date</th><th>Amount</th><th>Balance</th>
+  <thead>
+    <tr>
+      <%i = 0%>
+    <% @budget.BudgetItems.each do |bi|%>
+      <td><%= bi.BudgetCategory.Name%></td>
+      <td><%= bi.StartDate%></td>
+      <td><%= number_to_currency(bi.amount)%></td>
+      <td><%= @balArray[i]%></td>
+      <% i += i%>
+    <%end%>
+>>>>>>> a092df9f5687586ab97577bd0f56b293a8a92faf
   </tr>
 </table>

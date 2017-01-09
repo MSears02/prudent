@@ -11,7 +11,23 @@ class BudgetsController < ApplicationController
   # GET /budgets/1.json
   def show
       @budget = Budget.find(params[:id])
-      
+
+      @balArray = Array.new
+
+      i = 0
+      newBal = @budget.StartingBalance
+
+      @budget.BudgetItems.each do |b|
+
+        if(b.BudgetCategory.IsDebit)
+          newBal -= b.amount
+        else
+          newBal += b.amount
+        end
+        #add new balance to array
+        @balArray.push newBal
+      end
+
   end
 
 
