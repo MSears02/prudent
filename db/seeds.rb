@@ -18,3 +18,9 @@ cats = BudgetCategory.create([
   {Name: 'Audible', IsDebit: true, sort: 9}])
 
 budget = Budget.create([{Title: 'USAA Account', StartingBalance: '1708.95', CurrentBalance: '1708.95'}])
+
+#bi = BudgetItem.create([{amount: 150.00, DueDate: '2017-01-01', StartDate: '2017-01-01', EndDate: '2017-01-29', BudgetCategory_id: 1, IsReocurring: 1, IsCollection: 0}])
+#budget.BudgetItem << bi
+
+#bi = BudgetItem.create([{amount: 14.00, DueDate: '2017-01-01', StartDate: '2017-01-12', EndDate: '2017-01-12', BudgetCategory_id: 9, IsReocurring: 0, IsCollection: 0}])
+#budget.BudgetItem << bi
