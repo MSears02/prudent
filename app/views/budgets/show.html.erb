@@ -26,7 +26,7 @@
         <td><%= bi.BudgetCategory.Name%></td>
         <td><%= bi.StartDate%></td>
         <td><%= number_to_currency(bi.amount)%></td>
-        <td><%= @balArray[i]%></td>
+        <td><%= number_to_currency(@balArray[i])%></td>
         <% i += 1%>
     </tr>
   <%end%>
