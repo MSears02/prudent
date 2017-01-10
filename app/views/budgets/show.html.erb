@@ -20,15 +20,14 @@
 
     <th>Category</th><th>Due Date</th><th>Amount</th><th>Balance</th>
   <thead>
-    <tr>
-      <%i = 0%>
-    <% @budget.BudgetItems.each do |bi|%>
-      <td><%= bi.BudgetCategory.Name%></td>
-      <td><%= bi.StartDate%></td>
-      <td><%= number_to_currency(bi.amount)%></td>
-      <td><%= @balArray[i]%></td>
-      <% i += i%>
-    <%end%>
-
-  </tr>
+  <%i = 0%>
+  <% @budget.BudgetItems.each do |bi|%>
+      <tr>
+        <td><%= bi.BudgetCategory.Name%></td>
+        <td><%= bi.StartDate%></td>
+        <td><%= number_to_currency(bi.amount)%></td>
+        <td><%= @balArray[i]%></td>
+        <% i += 1%>
+    </tr>
+  <%end%>
 </table>

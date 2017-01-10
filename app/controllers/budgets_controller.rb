@@ -24,8 +24,10 @@ class BudgetsController < ApplicationController
         else
           newBal += b.amount
         end
+        puts(newBal)
         #add new balance to array
-        @balArray.push newBal
+      @balArray.push newBal
+        i += 1
       end
 
   end
