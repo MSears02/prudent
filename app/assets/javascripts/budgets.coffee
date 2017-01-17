@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 (->
   BudgetCtrlJs = () ->
-    @Name = "Matt Sears"
+    @Name = "Finally, Angular Works with coffeescript!"
     return
 
   angular
