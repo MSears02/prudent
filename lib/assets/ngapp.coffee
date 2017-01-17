@@ -1,1 +1,2 @@
-angular.module("prudentjs", [])
+$->
+  angular.module -> ("prudentjs", [])
