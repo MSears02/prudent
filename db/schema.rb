@@ -50,13 +50,6 @@ ActiveRecord::Schema.define(version: 20170108064516) do
     t.index ["budget_id", "BudgetItem_id"], name: "index_budgets_budget_items_on_budget_id_and_BudgetItem_id", using: :btree
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.string   "PageTitle"
-    t.string   "PermaLink"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
