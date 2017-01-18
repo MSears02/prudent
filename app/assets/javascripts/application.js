@@ -18,5 +18,6 @@
 //= require turbolinks
 //= require angular
 //= require angular-resource
+//= require angular-rails-templates
 //= require moment
 //= require_tree .

@@ -2,8 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 (->
-  BudgetCtrlJs = () ->
-    @Name = "Finally, Angular Works with coffeescript!"
+  BudgetCtrlJs = ($rootScope, $scope) ->
+    vm = @
+    vm.FirstName = "Matthew"
+    vm.LastName = "Sears"
     return
 
   angular

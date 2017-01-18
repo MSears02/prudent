@@ -7,8 +7,11 @@ gem 'rails', '~> 5.0.0'
 
 	gem "pg", '~> 0.19.0'
 
+
+
 #Angular
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
