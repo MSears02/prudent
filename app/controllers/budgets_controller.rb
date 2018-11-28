@@ -5,6 +5,11 @@ class BudgetsController < ApplicationController
   # GET /budgets.json
   def index
     @budgets = Budget.all
+    
+    respond_to do |format|
+      format.html
+      format.json {render json: @budgets}
+    end
   end
 
   # GET /budgets/1

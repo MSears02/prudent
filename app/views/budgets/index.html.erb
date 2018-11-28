@@ -3,19 +3,38 @@
 <h1>Budgets</h1>
 <div ng-controller="BudgetCtrlJs as b">
   {{b.FirstName}} {{b.LastName}}
-</div>
-<table class="table">
+  
+  <table class="table table-stripped">
+    <thead>
+      <th>Title</th>
+      <th>Current Balance</th>
+      <th>Options</th>
+    </thead>
+    
+    <tr ng-repeat="bud in b.budgets">
+      <td>{{bud.Title}}</td>
+      <td>{{bud.CurrentBalance}}</td>
+      <td><a href="budgets/{{bud.id}}">Show</a></td>
+      <td><a href="budgets/{{bud.id}}/edit">Edit</a></td>
+      
+    
+    </tr>
+    </tbody>
+  </table>
+
+  <table class='table table-stripped'>
   <thead>
     <tr>
-
+      <th>Title</th><th>Current Balance</th><th>Options</th>
     </tr>
   </thead>
 
   <tbody>
     <% @budgets.each do |budget| %>
       <tr>
-        <td><%= budget.Title %> -- <%= number_to_currency(budget.CurrentBalance) %></td>
-
+        <td><%= budget.Title %></td>
+        <td><%= number_to_currency(budget.CurrentBalance) %></td>
+        
         <td><%= link_to 'Show', budget %></td>
         <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
         <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,3 +46,6 @@
 <br>
 
 <%= link_to 'New Budget', new_budget_path %>
+
+</div>
+

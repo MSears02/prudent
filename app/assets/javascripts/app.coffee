@@ -1,3 +1,5 @@
 (->
-  angular.module 'prudentjs', ['ngResource']
+  angular
+    .module 'prudentjs', ['ngResource']
 )()
+

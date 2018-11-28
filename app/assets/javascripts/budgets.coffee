@@ -2,12 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 (->
-  BudgetCtrlJs = ($rootScope, $scope) ->
-    vm = @
-    vm.FirstName = "Matthew"
-    vm.LastName = "Sears"
+  BudgetCtrlJs = ['$resource', '$rootScope', '$scope',($resource, $rootScope, $scope) ->    
+    
+    Budget = $resource("api/budgets", {method: 'GET'})
+    @budgets = Budget.query()
+    @FirstName = "Matthew"
+    @LastName = "Sears"
     return
-
+  ]
   angular
     .module('prudentjs')
     .controller('BudgetCtrlJs', BudgetCtrlJs)
