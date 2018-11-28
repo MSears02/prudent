@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :budget_categories
   resources :budget_items
-  resources :budgets
 
   namespace :api, defaults: {format: 'json'} do
     resources  :budgets
@@ -14,7 +13,7 @@ Rails.application.routes.draw do
   
 
 
-
+  resources :budgets
    # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root 'budgets#index'
