@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :budget_items
 
   namespace :api, defaults: {format: 'json'} do
-    resources  :budgets
+    namespace :v1 do
+      resources  :budgets
+    end
   end
 
   get 'home/index'

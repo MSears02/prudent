@@ -4,10 +4,10 @@
 (->
   BudgetCtrlJs = ['$resource', '$rootScope', '$scope',($resource, $rootScope, $scope) ->    
     
-    Budget = $resource("api/budgets", {method: 'GET'})
+    Budget = $resource("api/v1/budgets/:id", {id: "@id"}, {method: 'GET'})
     @budgets = Budget.query()
     @FirstName = "Matthew"
-    @LastName = "Sears"
+    @LastName =  "Sears"
     return
   ]
   angular
