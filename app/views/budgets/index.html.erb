@@ -12,9 +12,8 @@
     </thead>
     
     <tr ng-repeat="bud in b.budgets">
-      <td>{{bud.Title}}</td>
-      <td>{{bud.CurrentBalance | currency:"$"}}</td>
-      <td><a href="budgets/{{bud.id}}">Show</a></td>
+      <td><a href="budgets/{{bud.id}}">{{bud.Title}}</a></td>
+      <td>{{bud.CurrentBalance | currency:"$"}}</td>     
       <td><a href="budgets/{{bud.id}}/edit">Edit</a></td>
       
     
